@@ -1,0 +1,4 @@
+address	:- 208.91.198.196
+Database :- ParkingProject
+User name :- ParkingProject
+password :- someshpathak

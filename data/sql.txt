@@ -1,0 +1,5 @@
+login 
+
+SELECT        Type
+FROM            login
+WHERE        (UserName = 'user') AND (Password = 'user')

@@ -1,0 +1,1 @@
+select sum(Ammount) from recharge where time > '2/16/2012 4:15:00 PM'

@@ -1,0 +1,11 @@
+insert into configuration (
+   Location
+  ,ProductID
+  ,PaymentMode
+  ,Discount
+) VALUES (
+   'HIGH COURT' -- Location
+  ,'1111' -- ProductID
+  ,'STATIC' -- PaymentMode
+  ,0 -- Discount
+)

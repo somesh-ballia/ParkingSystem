@@ -1,0 +1,9 @@
+insert into login (
+   UserName
+  ,Password
+  ,[Type]
+) VALUES (
+   'admin' -- UserName
+  ,'admin' -- Password
+  ,'ADMIN' -- Type
+)

@@ -1,0 +1,41 @@
+insert into rate (
+   Location
+  ,[Type]
+  ,Fixed
+  ,Variable
+  ,Constant
+) VALUES (
+   'HIGH COURT' -- Location
+  ,'2' -- Type
+  ,5 -- Fixed
+  ,3 -- Variable
+  ,10 -- Constant
+)
+
+insert into rate (
+   Location
+  ,[Type]
+  ,Fixed
+  ,Variable
+  ,Constant
+) VALUES (
+   'HIGH COURT' -- Location
+  ,'4' -- Type
+  ,10 -- Fixed
+  ,7 -- Variable
+  ,20 -- Constant
+)
+
+insert into rate (
+   Location
+  ,[Type]
+  ,Fixed
+  ,Variable
+  ,Constant
+) VALUES (
+   'HIGH COURT' -- Location
+  ,'B' -- Type
+  ,3 -- Fixed
+  ,1 -- Variable
+  ,5 -- Constant
+)

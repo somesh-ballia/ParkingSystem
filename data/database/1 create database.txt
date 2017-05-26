@@ -1,0 +1,91 @@
+create table login
+(
+UserName varchar(20) primary key,
+Password varchar(20),
+Type varchar(10)
+)
+create table account
+(
+RFID varchar(20) primary key,
+Balance money,
+LastUpdate DateTime
+)
+
+create table police
+(
+VNo varchar(20) primary key,
+Notify varchar(50)
+)
+
+create table configuration
+(
+Location varchar(20) Primary Key,
+ProductID varchar(10),
+PaymentMode varchar(10), -- Dynamic perday static perhour
+Discount Float
+)
+
+create table rate
+(
+Location Varchar(20),
+Type varchar(10), 
+Fixed money,
+Variable money,
+Constant money,
+CONSTRAINT FK_11 FOREIGN KEY (Location) REFERENCES configuration(Location)
+)
+
+create table today
+(
+RFID varchar(20) PRIMARY KEY,
+Location varchar(20),
+InTime DateTime,
+VType varchar(10),
+VNo varchar(20),
+CONSTRAINT FK_1 FOREIGN KEY (RFID) REFERENCES account(RFID),
+CONSTRAINT FK_12 FOREIGN KEY (Location) REFERENCES configuration(Location)
+)
+
+create table old
+(
+RFID varchar(20),
+Location varchar(20),
+InTime DateTime,
+OutTime DateTime,
+VType varchar(10),
+VNo varchar(20),
+CONSTRAINT FK_2 FOREIGN KEY (RFID) REFERENCES account(RFID),
+CONSTRAINT FK_13 FOREIGN KEY (Location) REFERENCES configuration(Location)
+)
+
+create table cash
+(
+Ammount money,
+RFID varchar(20),
+Location varchar(20),
+Time DateTime,
+VType varchar(20),
+CONSTRAINT FK_3 FOREIGN KEY (RFID) REFERENCES account(RFID),
+CONSTRAINT FK_14 FOREIGN KEY (Location) REFERENCES configuration(Location)
+)
+
+create table recharge
+(
+Ammount money,
+RFID varchar(20),
+Location varchar(20),
+Time DateTime
+CONSTRAINT FK_4 FOREIGN KEY (RFID) REFERENCES account(RFID),
+CONSTRAINT FK_15 FOREIGN KEY (Location) REFERENCES configuration(Location)
+)
+
+create table fine
+(
+Ammount money,
+RFID varchar(20),
+VNo varchar(20),
+Time DateTime,
+Location varchar(20)
+CONSTRAINT FK_5 FOREIGN KEY (RFID) REFERENCES account(RFID),
+CONSTRAINT FK_16 FOREIGN KEY (Location) REFERENCES configuration(Location)
+)

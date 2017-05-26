@@ -1,0 +1,24 @@
+NUMBER
+
+1) number of 2 wheelers in today
+2) number of 2 wheelers out today
+
+3) number of 4 wheelers in today
+4) number of 4 wheelers out today
+
+5) number of cycles in today
+6) number of cycles out today
+
+7) Total in today
+8) total out today
+
+
+
+
+Amount collected today
+
+1) cash -- 2 wheeler
+2) cash -- 4 wheeler
+3) cash -- cycle
+4) card
+5) fine
